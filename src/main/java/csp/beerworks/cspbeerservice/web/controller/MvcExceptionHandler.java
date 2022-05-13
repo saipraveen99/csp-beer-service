@@ -1,4 +1,4 @@
-package csp.beerworks.cspbeerservice.controller;
+package csp.beerworks.cspbeerservice.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

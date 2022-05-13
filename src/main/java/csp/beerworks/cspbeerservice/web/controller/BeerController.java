@@ -1,4 +1,4 @@
-package csp.beerworks.cspbeerservice.controller;
+package csp.beerworks.cspbeerservice.web.controller;
 
 import csp.beerworks.cspbeerservice.web.model.BeerDto;
 import org.springframework.http.HttpStatus;
