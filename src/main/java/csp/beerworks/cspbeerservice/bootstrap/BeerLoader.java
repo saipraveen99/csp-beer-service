@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-@Component
-@Slf4j
+//@Component
+//@Slf4j
 public class BeerLoader implements CommandLineRunner {
 
     public static final String BEER_1_UPC = "0631234200036";
@@ -55,7 +55,7 @@ public class BeerLoader implements CommandLineRunner {
                     .price(new BigDecimal(260))
                     .build());
 
-            log.info("Loaded beers: "+beerRepository.count());
+            //log.info("Loaded beers: "+beerRepository.count());
         }
     }
 }

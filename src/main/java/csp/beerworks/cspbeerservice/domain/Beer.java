@@ -3,6 +3,7 @@ package csp.beerworks.cspbeerservice.domain;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -16,11 +17,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(name = "beer")
 public class Beer {
 
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Type(type="org.hibernate.type.UUIDCharType")
     @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private UUID id;
 
@@ -29,7 +32,7 @@ public class Beer {
 
     @CreationTimestamp
     @Column(updatable = false)
-    private Timestamp createDate;
+    private Timestamp createdDate;
 
 
     @UpdateTimestamp
